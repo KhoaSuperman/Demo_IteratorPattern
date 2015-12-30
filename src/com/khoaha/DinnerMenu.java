@@ -6,7 +6,7 @@ package com.khoaha;
 public class DinnerMenu {
     MenuItem[] menuItems;
     static final int MAX_ITEM = 6;
-    int numberOfItems = 0;
+    public int numberOfItems = 0;
 
     public DinnerMenu() {
         menuItems = new MenuItem[MAX_ITEM];
@@ -28,5 +28,9 @@ public class DinnerMenu {
 
     public MenuItem[] getMenuItems() {
         return menuItems;
+    }
+
+    public Iterator createIterator(){
+        return new DinnerIterator(this);
     }
 }
