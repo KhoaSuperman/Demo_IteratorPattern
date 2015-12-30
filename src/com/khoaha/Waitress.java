@@ -8,10 +8,12 @@ import java.util.*;
 public class Waitress {
     Menu dinnerMenu;
     Menu pancakeHouseMenu;
+    Menu cafeMenu;
 
-    public Waitress(Menu dinnerMenu, Menu pancakeHouseMenu) {
+    public Waitress(Menu dinnerMenu, Menu pancakeHouseMenu, Menu cafeMenu) {
         this.dinnerMenu = dinnerMenu;
         this.pancakeHouseMenu = pancakeHouseMenu;
+        this.cafeMenu = cafeMenu;
     }
 
 //    public void printMenu(){
@@ -40,6 +42,11 @@ public class Waitress {
 
         System.out.println("Pancake Menu:");
         print(pancakeHouseMenu.createIterator());
+
+        System.out.println("---------------------");
+
+        System.out.println("Cafe Menu:");
+        print(cafeMenu.createIterator());
     }
 
     public void print(java.util.Iterator iterator){
