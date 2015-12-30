@@ -1,5 +1,7 @@
 package com.khoaha;
 
+import java.util.Iterator;
+
 /**
  * Created by HoangAnhKhoa on 12/30/15.
  */
@@ -33,6 +35,10 @@ public abstract class MenuComponent {
     }
 
     public void print(){
+        throw new UnsupportedOperationException("Not support yet");
+    }
+
+    public Iterator createIterator(){
         throw new UnsupportedOperationException("Not support yet");
     }
 }

@@ -1,6 +1,7 @@
 package com.khoaha;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by HoangAnhKhoa on 12/30/15.
@@ -68,5 +69,9 @@ public class MenuItem extends MenuComponent {
         }
         System.out.println(", Price: " + getPrice());
         System.out.println("  -- " + getDescription());
+    }
+
+    public Iterator createIterator(){
+        return new NullIterator();
     }
 }

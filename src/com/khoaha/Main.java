@@ -28,6 +28,6 @@ public class Main {
 
         //Waitress do
         Waitress waitress = new Waitress(allMenus);
-        waitress.print();
+        waitress.printVegetarianMenu();
     }
 }
