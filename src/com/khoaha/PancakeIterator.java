@@ -1,25 +1,27 @@
 package com.khoaha;
 
+import java.util.ArrayList;
+
 /**
  * Created by HoangAnhKhoa on 12/30/15.
  */
 public class PancakeIterator implements Iterator {
 
-    PancakeHouseMenu pancakeHouseMenu;
+    ArrayList<MenuItem> menuItems;
     int position = 0;
 
-    public PancakeIterator(PancakeHouseMenu pancakeHouseMenu) {
-        this.pancakeHouseMenu = pancakeHouseMenu;
+    public PancakeIterator(ArrayList<MenuItem> menuItems) {
+        this.menuItems = menuItems;
     }
 
     @Override
     public boolean hasNext() {
-        return position < pancakeHouseMenu.getMenuItems().size() && pancakeHouseMenu.getMenuItems().get(position) != null;
+        return position < menuItems.size() && menuItems.get(position) != null;
     }
 
     @Override
     public MenuItem next() {
-        MenuItem menuItem = pancakeHouseMenu.getMenuItems().get(position);
+        MenuItem menuItem = menuItems.get(position);
         position++;
         return menuItem;
     }

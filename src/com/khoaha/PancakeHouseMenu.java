@@ -28,6 +28,6 @@ public class PancakeHouseMenu {
     }
 
     public Iterator createIterator(){
-        return new PancakeIterator(this);
+        return new PancakeIterator(menuItems);
     }
 }

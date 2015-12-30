@@ -5,22 +5,22 @@ package com.khoaha;
  */
 public class DinnerIterator implements Iterator {
 
-    DinnerMenu dinnerMenu;
+    MenuItem[] menuItems;
     int position = 0;
 
-    public DinnerIterator(DinnerMenu dinnerMenu) {
-        this.dinnerMenu = dinnerMenu;
+    public DinnerIterator(MenuItem[] menuItems) {
+        this.menuItems = menuItems;
     }
 
     @Override
     public boolean hasNext() {
-        return position < DinnerMenu.MAX_ITEM && dinnerMenu.getMenuItems()[position] != null;
+        return position < DinnerMenu.MAX_ITEM && menuItems[position] != null;
     }
 
     @Override
     public MenuItem next() {
 
-        MenuItem menuItem = dinnerMenu.getMenuItems()[position];
+        MenuItem menuItem = menuItems[position];
         position++;
         return menuItem;
     }

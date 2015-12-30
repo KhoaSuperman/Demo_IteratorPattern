@@ -6,8 +6,13 @@ import java.util.ArrayList;
  * Created by HoangAnhKhoa on 12/30/15.
  */
 public class Waitress {
-    DinnerMenu dinnerMenu = new DinnerMenu();
-    PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
+    DinnerMenu dinnerMenu;
+    PancakeHouseMenu pancakeHouseMenu;
+
+    public Waitress(DinnerMenu dinnerMenu, PancakeHouseMenu pancakeHouseMenu) {
+        this.dinnerMenu = dinnerMenu;
+        this.pancakeHouseMenu = pancakeHouseMenu;
+    }
 
     public void printMenu(){
         MenuItem[] dinnerItems = dinnerMenu.getMenuItems();
