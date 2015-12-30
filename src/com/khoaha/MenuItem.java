@@ -1,9 +1,11 @@
 package com.khoaha;
 
+import java.util.ArrayList;
+
 /**
  * Created by HoangAnhKhoa on 12/30/15.
  */
-public class MenuItem {
+public class MenuItem extends MenuComponent {
     String name;
     String description;
     boolean vegetarian;
@@ -56,5 +58,15 @@ public class MenuItem {
                 ", vegetarian=" + vegetarian +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public void print() {
+        System.out.print("  " + getName());
+        if (isVegetarian()){
+            System.out.print("(v)");
+        }
+        System.out.println(", Price: " + getPrice());
+        System.out.println("  -- " + getDescription());
     }
 }
