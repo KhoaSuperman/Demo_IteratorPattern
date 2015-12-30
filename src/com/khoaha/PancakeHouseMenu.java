@@ -6,7 +6,7 @@ import java.util.Iterator;
 /**
  * Created by HoangAnhKhoa on 12/30/15.
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu{
     ArrayList<MenuItem> menuItems;
 
     public PancakeHouseMenu() {

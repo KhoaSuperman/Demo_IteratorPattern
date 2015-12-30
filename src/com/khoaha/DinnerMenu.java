@@ -6,7 +6,7 @@ import java.util.Iterator;
 /**
  * Created by HoangAnhKhoa on 12/30/15.
  */
-public class DinnerMenu {
+public class DinnerMenu implements Menu {
     MenuItem[] menuItems;
     static final int MAX_ITEM = 6;
     public int numberOfItems = 0;
