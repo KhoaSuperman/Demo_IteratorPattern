@@ -28,7 +28,16 @@ public class Waitress {
     }
 
     public void printMenuIterator(){
-        Iterator iterator = dinnerMenu.createIterator();
+        System.out.println("Dinner Menu:");
+        print(dinnerMenu.createIterator());
+
+        System.out.println("---------------------");
+
+        System.out.println("Pancake Menu:");
+        print(pancakeHouseMenu.createIterator());
+    }
+
+    public void print(Iterator iterator){
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }
