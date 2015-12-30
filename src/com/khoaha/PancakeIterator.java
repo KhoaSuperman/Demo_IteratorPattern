@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by HoangAnhKhoa on 12/30/15.
  */
-public class PancakeIterator implements Iterator {
+public class PancakeIterator implements java.util.Iterator {
 
     ArrayList<MenuItem> menuItems;
     int position = 0;
@@ -24,5 +24,13 @@ public class PancakeIterator implements Iterator {
         MenuItem menuItem = menuItems.get(position);
         position++;
         return menuItem;
+    }
+
+    @Override
+    public void remove() {
+        if(position <= 0){
+            throw new IllegalStateException("You can not remove item until you done at least one next()");
+        }
+        menuItems.remove(position);
     }
 }

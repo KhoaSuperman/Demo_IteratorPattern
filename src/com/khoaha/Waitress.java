@@ -1,6 +1,6 @@
 package com.khoaha;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Created by HoangAnhKhoa on 12/30/15.
@@ -42,7 +42,7 @@ public class Waitress {
         print(pancakeHouseMenu.createIterator());
     }
 
-    public void print(Iterator iterator){
+    public void print(java.util.Iterator iterator){
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }
